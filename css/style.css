@@ -241,7 +241,7 @@
 .top-cont {
   border-top-right-radius: 8rem;
   padding: 10px;
-  margin: 0 auto;
+  margin-inline: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -628,7 +628,7 @@ footer {
       width: 100%;
   }
 
-  img {
+  .about-cont1,.about-cont2,.about-cont3 img {
       display: none;
   }
 }

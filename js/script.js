@@ -35,4 +35,24 @@ document.getElementById('submitButton').addEventListener('click', () => {
     }
 });
   
-  
+function navigateTo(page) {
+  switch(page) {
+        case 'home':
+            window.location.href = '../index.html';
+            break;
+        case 'about':
+            window.location.href = '../html/about.html';
+            break;
+        case 'contact':
+            window.location.href = '../html/contact.html';
+            break;
+        case 'signup':
+            window.location.href = '../html/SignUp.html';
+            break;
+        case 'login':
+            window.location.href = '../html/LogIn.html';
+            break;
+      default:
+          console.log('Page not found');
+  }
+}

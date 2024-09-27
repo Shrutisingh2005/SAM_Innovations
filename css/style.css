@@ -127,17 +127,14 @@
   }
   
   .text-content h2 {
-    font-size: 3.6rem;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: 0.1em;
+    font-size: 2rem;
+    font-weight: 500;
   }
   
   .text-content span {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 100;
-    line-height: 1;
     margin: 20px 0;
   }
   
@@ -168,9 +165,8 @@
   }
   
   .image-content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: contain;
     mix-blend-mode: color-dodge;
   }
   
@@ -464,6 +460,7 @@ footer {
 
 /* about */
 #about {
+  margin-inline: 10%;
   padding: 20px;
   font-weight: 300;
   display: flex;
@@ -473,9 +470,15 @@ footer {
   flex-wrap: wrap;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-cont1, .about-cont2, .about-cont3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 30px;
   border: 2px solid;
@@ -483,16 +486,18 @@ footer {
   border-image-slice: 1;
   background-color: transparent;
   margin-block: 20px;
-  max-width: 80%;
+  max-width: 100%;
   width: 100%;
 }
 
 .about-cont1 img {
+  flex: 1;
   max-width: 50%;
   border-radius: 20px;
   height: auto;
 }
 .about-cont2 img {
+  flex: 1;
   max-width: 50%;
   order: 2;
   border-radius: 20px;
@@ -500,12 +505,14 @@ footer {
 }
 
 .about-cont3 img {
+  flex: 1;
   max-width: 50%;
   border-radius: 20px;
   height: auto;
 }
 
 .about-cont {
+  flex: 1;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -513,7 +520,7 @@ footer {
 }
 
 .about-cont h2 {
-  font-size: 7vh;
+  font-size: 2.rem;
   font-weight: 500;
   margin: 0;
 }
@@ -527,20 +534,23 @@ footer {
   font-size: 3.4vh;
 }
 
+.about-cont div strong {
+  color: #ecd8c5;
+}
+
 #about > div p {
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 
 #about-p {
   max-height: auto;
   margin-block: 20px;
-  max-width: 50%;
   padding: 30px;
-  border: 2px solid;
-  border-image: linear-gradient(90deg, #23FFB9 0%, #451599 100%);
-  border-image-slice: 1;
+  border: 2px solid wheat;
   border-radius: 30px;
   font-size: 16px;
+  justify-content: center;
+  align-items: center;
 } 
 
 /* Responsive Design */
@@ -557,7 +567,105 @@ footer {
   }
 
   img {
-      max-width: 100%;
-      height: auto;
+      display: none;
   }
+}
+
+h1 {
+  font-size: 3rem;
+  color: #E4B88C;
+}
+/* profile .profile-card */
+.profile-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+.profile-container .profile-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 1em;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
+}
+.profile-container .profile-card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.profile-container .profile-card .content .img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.profile-container .profile-card .content .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-container .profile-card .content .cardContent h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+.profile-container .profile-card .content .cardContent h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.profile-container .profile-card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.profile-container .profile-card .sci li {
+  margin: 0 10px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+.profile-container .profile-card .sci li a {
+  font-size: 24px;
+}
+.profile-container .profile-card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.profile-container .profile-card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
 }

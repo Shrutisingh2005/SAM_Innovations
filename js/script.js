@@ -38,19 +38,19 @@ document.getElementById('submitButton').addEventListener('click', () => {
 function navigateTo(page) {
   switch(page) {
         case 'home':
-            window.location.href = '../index.html';
+            window.location.href = './index.html';
             break;
         case 'about':
-            window.location.href = '../html/about.html';
+            window.location.href = './about.html';
             break;
         case 'contact':
-            window.location.href = '../html/contact.html';
+            window.location.href = './contact.html';
             break;
         case 'signup':
-            window.location.href = '../html/SignUp.html';
+            window.location.href = './SignUp.html';
             break;
         case 'login':
-            window.location.href = '../html/LogIn.html';
+            window.location.href = './LogIn.html';
             break;
       default:
           console.log('Page not found');

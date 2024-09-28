@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ques.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form - Company-Related Questions</h1>
+
+        <form id="registrationForm">
+            <div class="question">
+                <label for="workedBefore">Have you worked in this company before?</label>
+                <select id="workedBefore" name="workedBefore" required>
+                    <option value="" disabled selected>Select your answer</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="familyWorking">Is any of your family members currently working in this company?</label>
+                <select id="familyWorking" name="familyWorking" required>
+                    <option value="" disabled selected>Select your answer</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="familyWorkedBefore">Has any of your family members worked in this company before?</label>
+                <select id="familyWorkedBefore" name="familyWorkedBefore" required>
+                    <option value="" disabled selected>Select your answer</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="referred">Are you currently or have you ever been referred by an employee of this company?</label>
+                <select id="referred" name="referred" required>
+                    <option value="" disabled selected>Select your answer</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <a href="experience.html" class="prev-button">Previous</a>
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/ques.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ques.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form - Work Experience</h1>
+
+        <form>
+            <div class="question">
+                <label for="currentJobTitle">Current Job Title:</label>
+                <input type="text" id="currentJobTitle" name="currentJobTitle" required>
+            </div>
+
+            <div class="question">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+            </div>
+
+            <div class="question">
+                <label for="experienceYears">Years of Experience:</label>
+                <input type="number" id="experienceYears" name="experienceYears" required>
+            </div>
+
+            <div class="question">
+                <label for="keySkills">Key Skills:</label>
+                <textarea id="keySkills" name="keySkills" required></textarea>
+            </div>
+
+            <div class="button-container">
+                <a href="education.html" class="prev-button">Previous</a>
+                <a href="ethnicity.html" class="next-button">Next</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/ques.js"></script>
+</body>
+</html>

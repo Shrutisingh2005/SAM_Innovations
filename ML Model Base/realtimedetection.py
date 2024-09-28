@@ -18,7 +18,7 @@ def extract_features(image):
     return feature/255.0
 
 webcam=cv2.VideoCapture(0)
-labels = {0 : 'angry', 1 : 'sad', 2 : 'disgust', 3 : 'fear', 4 : 'neutal', 5 : 'happy', 6 : 'surprise'}
+labels = {0 : 'angry', 1 : 'sad', 2 : 'disgust', 3 : 'neutral', 4 : 'fear', 5 : 'happy', 6 : 'surprise'}
 while True:
     i,im=webcam.read()
     gray=cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
@@ -40,6 +40,6 @@ while True:
             # cv2.putText(im,prediction_label)
             cv2.putText(im, '% s' %(prediction_label), (p-10, q-10),cv2.FONT_HERSHEY_COMPLEX_SMALL,2, (0,0,255))
         cv2.imshow("Output",im)
-        cv2.waitKey(27)
+        cv2.waitKey(5000)
     except cv2.error:
         pass

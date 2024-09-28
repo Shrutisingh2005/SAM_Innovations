@@ -365,6 +365,23 @@
   }
 }
 
+.algo {
+  display: flex;
+  flex-direction: row;
+}
+
+.algo h1 {
+  color: antiquewhite;
+  font-size: 2rem;
+}
+
+.algo > button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 10px;
+}
 
 /* aside */
 .aside {
